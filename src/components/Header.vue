@@ -3,7 +3,8 @@
     <ul>
       <li>Cancel</li>
       <li><img alt="Vue logo" src="../assets/logo.png" /></li>
-      <li>Next</li>
+      <li v-if="page != 2">Next</li>
+      <li v-if="page == 2">Upload</li>
     </ul>
   </header>
 </template>
@@ -11,20 +12,23 @@
 <script>
 export default {
   name: "Header",
+  props: {
+    page: Number,
+  },
 };
 </script>
 
 <style>
 header {
-  padding:20px 0;
+  padding: 20px 0;
   margin-bottom: 1.3rem;
   border-bottom: 1px solid #ededed;
-  width:100%;
-  max-width:600px;
-  position:sticky;
-  top:-1px;
-  left:0;
-  background:white;
+  width: 100%;
+  max-width: 600px;
+  position: sticky;
+  top: -1px;
+  left: 0;
+  background: white;
 }
 header ul {
   display: flex;

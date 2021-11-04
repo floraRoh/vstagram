@@ -1,6 +1,6 @@
 <template>
   <div class="upload-page2">
-    <div class="img-div" :style="{ backgroundImage: `url(${imagUrl})` }"></div>
+    <div class="img-div" :style="`background-image: url(${imgUrl})`"></div>
   </div>
 </template>
 

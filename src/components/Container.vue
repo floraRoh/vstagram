@@ -3,7 +3,7 @@
     <div v-if="page == 0">
       <Post :postData="postData[i]" v-for="(post, i) in postData" :key="i" />
     </div>
-    <UploadPage v-if="page == 1" :imgUrl="imgUrl" />
+    <UploadPage v-if="page == 1" :imgUrl="imgUrl" :filters="filters" />
     <UploadPage2 v-if="page == 2" :imgUrl="imgUrl" />
   </div>
 </template>
@@ -23,6 +23,7 @@ export default {
     postData: Object,
     page: Number,
     imgUrl: String,
+    filters: Array,
   },
 };
 </script>
