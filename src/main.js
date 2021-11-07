@@ -1,6 +1,7 @@
 import { createApp } from "vue";
 import App from "./App.vue";
 import store from "./assets/store";
+import './registerServiceWorker'
 // import mitt from "mitt";
 // let emitter = mitt();
 let app = createApp(App);
