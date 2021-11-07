@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vstagram/precache-manifest.f54d36db26a9795934a29b1af8bb110f.js"
+  "/vstagram/precache-manifest.d46410822574c86f0b814fab7a1fafa9.js"
 );
 
 workbox.core.setCacheNameDetails({prefix: "vstagram"});
