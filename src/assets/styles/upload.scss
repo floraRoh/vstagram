@@ -3,27 +3,44 @@
   width: 100%;
   background: white;
 }
+
 .img-div {
   width: 100%;
-  height: 500px;
+  height: 50vh;
   border: 1px solid #dddddd;
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
+}
+.upload-page2 {
+  .img-div {
+    height: 65vh;
+  }
+  textarea {
+    width: 100%;
+    border: 1px solid #cdcdcd;
+    margin-top: 20px;
+    padding: 10px 30px;
+    height: 14vh;
+    resize: none;
+  }
 }
 .filter-line {
   overflow-x: scroll;
   white-space: nowrap;
   margin-top: 30px;
   li {
-    width: 150px;
-    height: 150px;
+    width: 25vw;
+    height: 25vh;
     list-style: none;
     display: inline-block;
     border: 1px solid #dddddd;
-    background-size:cover;
+    background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
-    margin-right:20px;
+    margin-right: 20px;
+    @media screen and (max-width: 512px){
+      width:40vw;
+    }
   }
 }

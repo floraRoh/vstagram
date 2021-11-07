@@ -1,5 +1,6 @@
-.post-wrap:not(:first-child) {
-  margin-top: 40px;
+.post-wrap {
+  padding: 0 20px;
+  margin-top:1.5rem;
 }
 .user-line {
   display: flex;
@@ -10,38 +11,29 @@
     border-radius: 100%;
     width: 45px;
     height: 45px;
+    @media screen and (max-width: 1024px) {
+      width: 30px;
+      height: 30px;
+    }
   }
   span {
-    font-size: 1.2rem;
-    font-weight: bold;
     margin-left: 10px;
   }
 }
 .likes-line {
   margin: 8px 0 0px;
-  strong {
-    font-size: 1.2rem;
-  }
 }
 .id-line {
   margin: 5px 0;
-  .id {
-    strong {
-      font-size: 1.5rem;
-    }
-  }
   .content {
-    font-size: 1rem;
     margin-left: 10px;
   }
 }
-.date-line {
-  font-size: 1.2rem;
-}
-.img-line{
-  width:100%;
-  height:350px;
-  background-size:cover;
+.img-line {
+  width: 100%;
+  max-height: 350px;
+  height: 45vh;
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
 }

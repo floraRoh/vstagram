@@ -15,16 +15,14 @@
 
 <script>
 import "../assets/styles/upload.scss";
+import { mapMutations, mapState } from "vuex";
 export default {
   name: "UploadPage",
-  props: {
-    imgUrl: String,
-    filters: Array,
+  computed: {
+    ...mapState(["imgUrl", "filters", "selectFilter"]),
   },
   methods: {
-    changeImg(_filter) {
-      document.querySelector(".img-div").className = `img-div ${_filter}`;
-    },
+    ...mapMutations(["changeImg"]),
   },
 };
 </script>

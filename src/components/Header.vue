@@ -1,46 +1,40 @@
 <template>
-  <header>
-    <ul>
-      <li>Cancel</li>
-      <li><img alt="Vue logo" src="../assets/logo.png" /></li>
-      <li v-if="page != 2">Next</li>
-      <li v-if="page == 2">Upload</li>
+  <header class="flex-between-center">
+    <ul class="flex-between-center">
+      <li class="font-big" @click="moveMainPage()">cancel</li>
+      <li class="font-big logo" @click="moveMainPage()">
+        <img alt="Vue logo" src="../assets/logo.png" />
+      </li>
+      <li v-if="page == 0">
+        <input
+          @change="upload($event.target.files)"
+          type="file"
+          id="file"
+          class="inputfile"
+          accept=".gif, .jpg, .png, .jfif"
+        />
+        <label class="input-plus font-big" for="file">update</label>
+      </li>
+      <li class="font-big" v-if="page == 1" @click="movePage2()">Next</li>
+      <li class="font-big" v-if="page == 2" @click="publishPost()">Upload</li>
     </ul>
   </header>
 </template>
 
 <script>
+import { mapMutations, mapState } from "vuex";
 export default {
   name: "Header",
-  props: {
-    page: Number,
+  computed: {
+    ...mapState(["page", "imgUrl"]),
+  },
+  methods: {
+    ...mapMutations([
+      "movePage2",
+      "moveMainPage",
+      "publishPost",
+      "upload"
+    ]),
   },
 };
 </script>
-
-<style>
-header {
-  padding: 20px 0;
-  margin-bottom: 1.3rem;
-  border-bottom: 1px solid #ededed;
-  width: 100%;
-  max-width: 600px;
-  position: sticky;
-  top: -1px;
-  left: 0;
-  background: white;
-}
-header ul {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  list-style: none;
-}
-header ul li {
-  height: 40px;
-  line-height: 40px;
-  font-size: 1.9rem;
-  color: #9bbfff;
-  font-weight: 500;
-}
-</style>
