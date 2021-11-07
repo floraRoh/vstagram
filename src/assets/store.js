@@ -79,7 +79,7 @@ const store = createStore({
   actions: {
     getData(context) {
       axios
-        .get(`https://floraroh.github.io/vstagram/more${context.state.moreIndex}.json`)
+        .get(`https://floraroh.github.io/vue-insta/more${context.state.moreIndex}.json`)
         .then((result) => {
           context.state.postData.push(result.data);
           context.state.moreIndex++;
