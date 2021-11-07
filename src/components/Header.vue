@@ -10,7 +10,7 @@
           @change="upload($event.target.files)"
           type="file"
           id="file"
-          class="inputfile"
+          class="display-none"
           accept=".gif, .jpg, .png, .jfif"
         />
         <label class="input-plus font-big" for="file">update</label>
